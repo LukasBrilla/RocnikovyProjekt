@@ -34,7 +34,7 @@ public class HomePlayerWebController
 	@GetMapping(value = "/home-players/update/{id}")
 	public ModelAndView updateHomePlayer(@PathVariable Long id)
 	{	
-		 return new ModelAndView("/homePlayersUpdate").addObject("homePlayers", homePlayerService.findHomePlayer(id));
+		 return new ModelAndView("/homePlayersUpdate").addObject("homePlayer", homePlayerService.findHomePlayer(id));
 	 }
 
 }

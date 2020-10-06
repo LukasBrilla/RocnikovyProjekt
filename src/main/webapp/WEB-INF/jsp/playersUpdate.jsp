@@ -13,7 +13,7 @@
 <span class="label label-default">Name :</span>
 <input type=text name="name" value="${player.getName()}" class="form-control"><br>
 <span class="label label-default">Points :</span>
-<input type=text name="role" value="${player.getPoints()}" class="form-control"><br>
+<input type=text name="points" value="${player.getPoints()}" class="form-control"><br>
 
 <span class="label label-default">Sex :</span>
 <input type=text name="sex" value="${player.getSex()}" class="form-control"><br>

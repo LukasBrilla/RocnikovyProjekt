@@ -13,7 +13,7 @@
 <span class="label label-default">Name :</span>
 <input type=text name="name" value="${homePlayer.getName()}" class="form-control"><br>
 <span class="label label-default">Points :</span>
-<input type=text name="role" value="${homePlayer.getPoints()}" class="form-control"><br>
+<input type=text name="points" value="${homePlayer.getPoints()}" class="form-control"><br>
 
 <span class="label label-default">Sex :</span>
 <input type=text name="sex" value="${homePlayer.getSex()}" class="form-control"><br>
@@ -24,9 +24,9 @@
 <span class="label label-default">Address : </span>
 <input type=text name="address" value="${homePlayer.getAddress()}" class="form-control"><br>
 <span class="label label-default">Registration Number : </span>
-<input type=text name="RegistrationNumber" value="${homePlayer.getRegistrationNumber()}" class="form-control"><br>
+<input type=text name="registrationNumber" value="${homePlayer.getRegistrationNumber()}" class="form-control"><br>
 <div class="custom-control custom-checkbox">
-<input type="checkbox" class="custom-control-input" value="homePlayer.isRightHanded()">
+<input type="checkbox" name="isRightHanded" class="custom-control-input" value="${homePlayer.isRightHanded()}">
 <label class="custom-control-label" >Right Handed?</label>
 </div>
 <span class="label label-default">Clothes Size :</span>
