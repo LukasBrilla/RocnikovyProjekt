@@ -18,6 +18,7 @@
                 <tr>
                     <td>${plr.getName()}</td>
                     <td>${plr.getPoints()}</td>
+                    <td>${plr.getSex()}</td>
                     <td style="width:5%">
 						<form:form action="/players/${plr.getId()}" method="POST">
                             <input type="submit" class="btn btn-sm btn-danger" value="Delete">

@@ -19,7 +19,7 @@ public class HomePlayer extends Player
 	@Column(nullable = false)
 	private String registrationNumber;
 	
-	private boolean isRightHanded;
+	private String handed;
 	
 	@Column(nullable = false)
 	private String clothesSize;
@@ -49,11 +49,19 @@ public class HomePlayer extends Player
 	public void setRegistrationNumber(String registrationNumber) {
 		this.registrationNumber = registrationNumber;
 	}
-	public boolean isRightHanded() {
-		return isRightHanded;
+	public String getHanded() {
+		return handed;
 	}
-	public void setRightHanded(boolean isRightHanded) {
-		this.isRightHanded = isRightHanded;
+	
+	public String getOppositeHanded() 
+	{
+	if(handed.equalsIgnoreCase("Right"))
+		return "Left";
+		return "Right";
+	}
+	public HomePlayer setHanded(String handed) {
+		this.handed = handed;
+		return this;
 	}
 	public String getClothesSize() {
 		return clothesSize;
@@ -65,7 +73,7 @@ public class HomePlayer extends Player
 	@Override
 	public String toString() {
 		return "HomePlayer [phone=" + phone + ", email=" + email + ", address=" + address + ", registrationNumber="
-				+ registrationNumber + ", isRightHanded=" + isRightHanded + ", clothesSize=" + clothesSize + "]";
+				+ registrationNumber + ", handed=" + handed + ", clothesSize=" + clothesSize + "]";
 	}
 	
 	

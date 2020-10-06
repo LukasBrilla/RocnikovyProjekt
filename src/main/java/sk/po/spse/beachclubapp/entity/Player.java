@@ -58,6 +58,13 @@ public class Player
 	public String getSex() {
 		return sex;
 	}
+	
+	public String getOppositeSex() {
+	if(sex.equalsIgnoreCase("Male"))
+	return "Female";
+	return "Male";
+	}
+	
 	public void setSex(String sex) {
 		this.sex = sex;
 	}

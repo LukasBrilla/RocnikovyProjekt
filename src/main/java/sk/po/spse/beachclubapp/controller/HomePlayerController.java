@@ -29,9 +29,9 @@ public class HomePlayerController
 	public ModelAndView addHomePlayer(@RequestParam("name") String name, @RequestParam("points") int points,
 			@RequestParam("sex") String sex, @RequestParam("phone") String phone,@RequestParam("email") String email,
 			@RequestParam("address") String address, @RequestParam("registrationNumber") String registrationNumber, 
-			@RequestParam("isRightHanded") boolean isRightHanded, @RequestParam("clothesSize") String clothesSize)
+			@RequestParam("handed") String handed, @RequestParam("clothesSize") String clothesSize)
 	{
-		homePlayerService.createHomePlayer(name, points, sex, phone, email, address, registrationNumber, isRightHanded, clothesSize);
+		homePlayerService.createHomePlayer(name, points, sex, phone, email, address, registrationNumber, handed, clothesSize);
 		return new ModelAndView("/homePlayersBrowse").addObject("homePlayers", homePlayerService.findAll());
 	}
 	
@@ -59,10 +59,10 @@ public class HomePlayerController
 			 @RequestParam("points") int points, @RequestParam("sex") String sex, 
 			 @RequestParam("phone") String phone, @RequestParam("email") String email, 
 			 @RequestParam("address") String address, @RequestParam("registrationNumber") String registrationNumber, 
-			 @RequestParam("isRightHanded") boolean isRightHanded,@RequestParam("clothesSize") String clothesSize)
+			 @RequestParam("handed") String handed,@RequestParam("clothesSize") String clothesSize)
 	 {
 		homePlayerService.updateHomePlayer(id, name, points, sex, phone, 
-				email, address, registrationNumber, isRightHanded, clothesSize);	
+				email, address, registrationNumber, handed, clothesSize);
 		 return new ModelAndView("/homePlayersBrowse").addObject("homePlayers", homePlayerService.findAll());
 	 }
 	

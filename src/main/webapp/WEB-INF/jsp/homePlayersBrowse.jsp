@@ -16,7 +16,7 @@
                 <td>Email</td>
                 <td>Address</td>
                 <td>Registration Number</td>
-                <td>Player is...</td>
+                <td>Handed</td>
                 <td>Clothes Size</td>
             </tr>
             </thead>
@@ -24,11 +24,13 @@
                 <tr>
                     <td>${homplr.getName()}</td>
                     <td>${homplr.getPoints()}</td>
+                    <td>${homplr.getSex()}</td>
                     <td>${homplr.getPhone()}</td>
                     <td>${homplr.getEmail()}</td>
                     <td>${homplr.getAddress()}</td>
                     <td>${homplr.getRegistrationNumber()}</td>
-                    <td>${homplr.isRightHanded()}</td>
+                   	<td>${homplr.getHanded()}</td>
+                    <td>${homplr.getClothesSize()}</td>
                     <td style="width:5%">
 						<form:form action="/home-players/${homplr.getId()}" method="POST">
                             <input type="submit" class="btn btn-sm btn-danger" value="Delete">

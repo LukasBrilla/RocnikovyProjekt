@@ -11,9 +11,13 @@
 <span class="label label-default">Name :</span>
 <input type=text name="name" class="form-control"><br>
 <span class="label label-default">Points :</span>
-<input type=text name="points" class="form-control"><br>
-<span class="label label-default">Sex (Male / Female) :</span>
-<input type=text name="sex" class="form-control"><br>
+<input type=number name="points" class="form-control"><br>
+<span class="label label-default">Sex :</span>
+<select name="sex" id="sex" class="form-control">
+<option value="" disabled selected hidden>Choose sex</option>
+<option value="Male">Male</option>
+<option value="Female">Female</option>
+</select><br>
 <input type=submit class="btn btn-sm btn-success" value="Add">
 </form>
 

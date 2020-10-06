@@ -18,7 +18,7 @@ public class HomePlayerService
 
 
 	public HomePlayer createHomePlayer(String name, int points, String sex, String phone, 
-			String email, String address, String registrationNumber, boolean isRightHanded, String clothesSize)
+			String email, String address, String registrationNumber, String handed, String clothesSize)
 	{
 		HomePlayer homePlayer = new HomePlayer();
 		homePlayer.setName(name);
@@ -28,7 +28,7 @@ public class HomePlayerService
 		homePlayer.setEmail(email);
 		homePlayer.setAddress(address);
 		homePlayer.setRegistrationNumber(registrationNumber);
-		homePlayer.setRightHanded(isRightHanded);
+		homePlayer.setHanded(handed);
 		homePlayer.setClothesSize(clothesSize);
 		return homePlayerRepository.save(homePlayer);
 	}
@@ -58,7 +58,7 @@ public class HomePlayerService
 	}
 	
 	public HomePlayer updateHomePlayer(Long id, String name, int points, String sex, String phone, 
-			String email, String address, String registrationNumber, boolean isRightHanded, String clothesSize)
+			String email, String address, String registrationNumber, String handed, String clothesSize)
 	{
 		HomePlayer homePlayer = homePlayerRepository.findById(id).orElseThrow(IllegalArgumentException::new);
 		homePlayer.setName(name);
@@ -68,7 +68,7 @@ public class HomePlayerService
 		homePlayer.setEmail(email);
 		homePlayer.setAddress(address);
 		homePlayer.setRegistrationNumber(registrationNumber);
-		homePlayer.setRightHanded(isRightHanded);
+		homePlayer.setHanded(handed);
 		homePlayer.setClothesSize(clothesSize);
 		return homePlayerRepository.save(homePlayer);
 	}

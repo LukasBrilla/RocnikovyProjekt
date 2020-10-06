@@ -11,22 +11,28 @@
 <span class="label label-default">Name :</span>
 <input type=text name="name" class="form-control"><br>
 <span class="label label-default">Points :</span>
-<input type=text name="points" class="form-control"><br>
-<span class="label label-default">Sex (Male / Female) :</span>
-<input type=text name="sex" class="form-control"><br>
+<input type=number name="points" class="form-control"><br>
+<span class="label label-default">Sex :</span>
+<select name="sex" id="sex" class="form-control">
+<option value="" disabled selected hidden>Choose sex</option>
+<option value="Male">Male</option>
+<option value="Female">Female</option>
+</select><br>
 <span class="label label-default">Phone : </span>
 <input type=text name="phone" class="form-control"><br>
 <span class="label label-default">Email : </span>
-<input type=text name="email" class="form-control"><br>
+<input type=email name="email" class="form-control"><br>
 <span class="label label-default">Address : </span>
 <input type=text name="address" class="form-control"><br>
 <span class="label label-default">Registration Number :</span>
 <input type=text name="registrationNumber" class="form-control"><br>
 
-<div class="custom-control custom-checkbox">
-<input type="checkbox" class="custom-control-input" id="defaultUnchecked" name="isRightHanded">
-<label class="custom-control-label" for="defaultUnchecked">Player is Right Handed</label>
-</div>
+<span class="label label-default">Handed :</span>
+<select name="handed" id="handed" class="form-control">
+<option value="" disabled selected hidden>Choose handed</option>
+<option value="Right">Right</option>
+<option value="Left">Left</option>
+</select><br>
 
 <span class="label label-default">Clothes size :</span>
 <input type=text name="clothesSize" class="form-control"><br>
