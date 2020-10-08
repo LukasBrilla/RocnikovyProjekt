@@ -4,8 +4,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <mt:template title="BeachclubApp">
     <jsp:attribute name="content">
-
-	<h1>Update Employee</h1>.
+<br>
+	<h1>Update Employee</h1>
 	
 	
 	
@@ -14,7 +14,7 @@
 <input type=text name="name" value="${employee.getName()}" class="form-control"><br>
 <span class="label label-default">Role:</span>
 <input type=text name="role" value="${employee.getRole().getName()}" class="form-control"><br>
-<input type=submit class="btn btn-sm btn-success">
+<input type=submit class="btn btn-sm btn-success" value="Update">
 </form>
 
     </jsp:attribute>

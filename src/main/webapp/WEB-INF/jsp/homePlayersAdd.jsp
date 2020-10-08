@@ -4,7 +4,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <mt:template title="Add Home Player">
 	<jsp:attribute name="content">
- 
+ <br>
         <h1>Add New Home Player</h1>
 
 <form action="${pageContext.request.contextPath}/home-players" method="post">

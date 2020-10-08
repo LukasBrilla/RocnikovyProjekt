@@ -2,13 +2,15 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<mt:template title="BeachclubApp">
+<mt:template title="Browser">
     <jsp:attribute name="content">
     <br>
-        <h1>Welcome to the BeachclubApp !</h1>
+        <h1>Tournament</h1>
         <br>
-    
-        <h2>Functional system of Beachclub Prešov</h2>
+        <br>
+        <h4>Hello ! Now you can make your own tournament.</h4>
+
+        
 
     </jsp:attribute>
 </mt:template>

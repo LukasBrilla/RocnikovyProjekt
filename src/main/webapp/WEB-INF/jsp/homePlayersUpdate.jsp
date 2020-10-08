@@ -4,7 +4,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <mt:template title="BeachclubApp">
     <jsp:attribute name="content">
-
+<br>
 	<h1>Update Home Player</h1>
 	
 <form action="${pageContext.request.contextPath}/home-players/update/${homePlayer.getId()}" method="post">
@@ -33,7 +33,7 @@
 </select><br>
 <span class="label label-default">Clothes Size :</span>
 <input type=text name="clothesSize" value="${homePlayer.getClothesSize()}" class="form-control"><br>
-<input type=submit class="btn btn-sm btn-success">
+<input type=submit class="btn btn-sm btn-success" value="Update">
 </form>
 
     </jsp:attribute>

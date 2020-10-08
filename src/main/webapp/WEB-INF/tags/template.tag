@@ -48,6 +48,11 @@
         </div>
       </li>
       </ul>
+       </li>
+     <li><a href="/tournament">Tournament</a></li>
+       
+      </li>
+      </ul>
   </div>
 </nav>
 </nav>
