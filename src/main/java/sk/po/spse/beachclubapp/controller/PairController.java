@@ -45,7 +45,7 @@ public class PairController
 	 @GetMapping(path="/pairs/{id}")
 	 public Pair getPair(@PathVariable("id") Long id)
 	 {
-		return pairService.findRole(id);
+		return pairService.findById(id);
 	 }
 	 
 	 

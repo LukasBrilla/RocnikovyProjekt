@@ -27,7 +27,7 @@ public class PairService
 		 return pairRepository.findAll();
 	}
 	
-	public Pair findRole(Long id)
+	public Pair findById(Long id)
 	{
 		 return pairRepository.findById(id).orElseThrow(IllegalArgumentException::new);	
 	}

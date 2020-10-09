@@ -35,7 +35,7 @@ public class PairWebController
 	@GetMapping(value = "/pairs/update/{id}")
 	public ModelAndView updatePair(@PathVariable Long id)
 	{	
-		 return new ModelAndView("/pairsUpdate").addObject("pairs", pairService.findRole(id));
+		 return new ModelAndView("/pairsUpdate").addObject("pair", pairService.findById(id));
 	 }
 
 }
