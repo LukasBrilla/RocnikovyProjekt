@@ -9,9 +9,9 @@
 	
 <form action="${pageContext.request.contextPath}/pairs/update/${pair.getId()}" method="post">
     <span class="label label-default">ID of First Player :</span>
-    <input type=text name="firstPlayerId" value="${pair.getfirstPlayer()}" class="form-control"><br>
+    <input type=text name="firstPlayerId" value="${pair.getFirstPlayer().getId()}" class="form-control"><br>
     <span class="label label-default">ID of Second Player :</span>
-    <input type=text name="secondPlayerId" value="${pair.getsecondPlayer()}" class="form-control"><br>
+    <input type=text name="secondPlayerId" value="${pair.getSecondPlayer().getId()}" class="form-control"><br>
 	<input type=submit class="btn btn-sm btn-success" value="Update">
 
 
