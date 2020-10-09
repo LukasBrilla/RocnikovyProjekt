@@ -47,9 +47,19 @@
           <a class="dropdown-item" href="/home-players/browse">Browse</a>
         </div>
       </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Beach Pairs
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+           <a class="dropdown-item" href="/pairs/add">Add</a>
+          <a class="dropdown-item" href="/pairs/browse">Browse</a>
+        </div>
+      </li>
+       <li><a href="/tournament">Tournament</a></li>
       </ul>
        </li>
-     <li><a href="/tournament">Tournament</a></li>
+    
        
       </li>
       </ul>
