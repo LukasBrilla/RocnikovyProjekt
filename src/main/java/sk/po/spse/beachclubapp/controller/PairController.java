@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import sk.po.spse.beachclubapp.entity.Pair;
 import sk.po.spse.beachclubapp.entity.Player;
@@ -27,9 +28,10 @@ public class PairController
 	private PlayerService playerService;
 	
 	@PostMapping("/pairs")
-	public Pair addPair(@RequestParam("firstPlayerId") Long firstPlayerId, @RequestParam("secondPlayerId") Long secondPlayerId )
+	public ModelAndView addPair(@RequestParam("firstPlayerId") Long firstPlayerId, @RequestParam("secondPlayerId") Long secondPlayerId )
 	{
-		return pairService.createPair(playerService.findPlayer(firstPlayerId), playerService.findPlayer(secondPlayerId));
+		pairService.createPair(playerService.findPlayer(firstPlayerId), playerService.findPlayer(secondPlayerId));
+		return new ModelAndView("/pairsBrowse").addObject("pairs", pairService.findAll());
 	}
 
 	
@@ -47,23 +49,19 @@ public class PairController
 	 }
 	 
 	 
-	 @DeleteMapping("/pairs/{id}")
-	 public String deletePair(@PathVariable Long id)
+	 @PostMapping("/pairs/{id}")
+	 public ModelAndView deletePair(@PathVariable Long id)
 	 {
-		 if (pairService.deletePair(id)) 
-		 {
-			 return "Done !";
-		 } 
-		 else
-		 {
-			 return "Wrong id !";
-		 }
+		 pairService.deletePair(id); 
+		 
+		 return new ModelAndView("/pairsBrowse").addObject("pairs", pairService.findAll());
 	 }
 	 
-	 @PutMapping("/pairs/{id}")
-	 public Pair updatePair(@PathVariable Long id,@RequestParam("firstPlayerId") Long firstPlayerId, @RequestParam("secondPlayerId") Long secondPlayerId )
+	 @PostMapping("/pairs/update/{id}")
+	 public ModelAndView updatePair(@PathVariable Long id,@RequestParam("firstPlayerId") Long firstPlayerId, @RequestParam("secondPlayerId") Long secondPlayerId )
 		{
-			return pairService.updatePair(id, playerService.findPlayer(firstPlayerId), playerService.findPlayer(secondPlayerId));
+			pairService.updatePair(id, playerService.findPlayer(firstPlayerId), playerService.findPlayer(secondPlayerId));
+			return new ModelAndView("/pairsBrowse").addObject("pairs", pairService.findAll());
 		}
 	 
 	 
