@@ -9,9 +9,9 @@
 
 <form action="${pageContext.request.contextPath}/pairs" method="post">
     <span class="label label-default">ID of First Player :</span>
-    <input type=text name="firstPlayer" class="form-control"><br>
+    <input type=text name="firstPlayerId" class="form-control"><br>
     <span class="label label-default">ID of Second Player :</span>
-    <input type=text name="secondPlayer" class="form-control"><br>
+    <input type=text name="secondPlayerId" class="form-control"><br>
    
     <input type=submit class="btn btn-sm btn-success" value="Add">
 </form>
