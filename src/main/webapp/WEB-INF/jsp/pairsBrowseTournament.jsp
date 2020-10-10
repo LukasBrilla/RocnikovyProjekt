@@ -5,7 +5,8 @@
 <mt:template title="Browser">
     <jsp:attribute name="content">
     <br>
-        <h1>Beach Pairs Browser</h1>
+        <h1>Beach Pairs Browser - Tournament</h1>
+        <h4>Choose pairs which would play on your tournament.</h4>
 
         <table class="table table-hover">
             <thead>
@@ -19,21 +20,20 @@
                 <tr>
                     <td>${par.getFirstPlayer()}</td>
                     <td>${par.getSecondPlayer()}</td>
-                     <td>${par.getAllPoints()}</td>
+                    <td>${par.getAllPoints()}</td>
+                    
                     <td style="width:5%">
-						<form:form action="/pairs/${par.getId()}" method="POST">
-                            <input type="submit" class="btn btn-sm btn-danger" value="Delete">
-                        </form:form>
-                    </td>
-                    <td style="width:5%">
-						<form:form action="/pairs/update/${par.getId()}" method="GET">
-                            <input type="submit" class="btn btn-sm btn-success" value="Update">
+						<form:form action="???????????????????" method="GET">
+                            <input type="button" class="btn btn-sm btn-success" value="Add">
                         </form:form>
                     </td>
                 </tr>
             </c:forEach>
 
         </table>
+        <form:form action="/pairs/tournament" method="GET">
+         <input type="submit" class="btn btn-sm btn-success" value="Submit">
+         </form:form>
 
     </jsp:attribute>
 </mt:template>

@@ -28,6 +28,12 @@ public class Pair
 	public Player getFirstPlayer() {
 		return firstPlayer;
 	}
+	
+	public int getAllPoints() {
+		int allpoints = firstPlayer.getPoints() + secondPlayer.getPoints();
+		return allpoints;
+	}
+	
 	public void setFirstPlayer(Player firstPlayer) {
 		this.firstPlayer = firstPlayer;
 	}

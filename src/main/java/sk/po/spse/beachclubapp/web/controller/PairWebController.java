@@ -27,6 +27,17 @@ public class PairWebController
 		return new ModelAndView("/pairsBrowse").addObject("pairs", pairService.findAll());
 	}
 	
+	@GetMapping(value = "/pairs/browseTournament")
+	public ModelAndView getAllPairsOnTournament() {
+		return new ModelAndView("/pairsBrowseTournament").addObject("pairs", pairService.findAll());
+	}
+	
+	@GetMapping(value = "/pairs/tournament")
+	public ModelAndView getSortedPairsOnTournament() {
+		return new ModelAndView("/sortedPairsTournament").addObject("pairs", pairService.findAll());
+	}
+	
+	
 	@GetMapping(value = "/pairs/delete")
 	public ModelAndView deletePairs() {
 		return new ModelAndView("/pairsDelete").addObject("pairs", pairService.findAll());

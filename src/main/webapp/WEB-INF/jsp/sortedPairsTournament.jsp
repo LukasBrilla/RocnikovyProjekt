@@ -5,16 +5,13 @@
 <mt:template title="Browser">
     <jsp:attribute name="content">
     <br>
-        <h1>Tournament</h1>
+        <h1>Deployment of your tournament</h1>
         <br>
-        <br>
-        <h4>Hello ! Now you can make your own tournament.</h4>
-        <br>
-        <h4>Let´s make a tournament of 16 Beach pairs. Now choose which pairs would be at your tournament.</h4>
+    
         
         <br>
         <br>
-        <a href="/pairs/browseTournament" class="btn btn-info" role="button">START</a>
+      
 
         
 
