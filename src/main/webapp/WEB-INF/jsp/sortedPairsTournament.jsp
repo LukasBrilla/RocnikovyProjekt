@@ -7,8 +7,20 @@
     <br>
         <h1>Deployment of your tournament</h1>
         <br>
-    
-        
+        <h4>sorted pairs by points:</h4>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <td>Team</td>
+                <td>Points Together</td>
+            </tr>
+            </thead>
+            <c:forEach items="${sortedPairs}" var="regPar">
+                <tr>
+                    <td>${regPar.getFirstPlayer().getName()} / ${regPar.getSecondPlayer().getName()}</td>
+                    <td>${regPar.getAllPoints()}</td>
+                </tr>
+            </c:forEach>
         <br>
         <br>
       

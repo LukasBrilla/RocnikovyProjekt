@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
 
 
 @Entity
-public class Pair 
+public class Pair implements Comparable
 {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -46,9 +46,11 @@ public class Pair
 	
 	@Override
 	public String toString() {
-		return "Pair [id=" + id + ", firstPlayer=" + firstPlayer + ", secondPlayer=" + secondPlayer + "]";
+		return id + "";
 	}
-	
-	
-	
+
+	@Override
+	public int compareTo(Object o) {
+		return Integer.compare(((Pair) o).getAllPoints(), getAllPoints());
+	}
 }

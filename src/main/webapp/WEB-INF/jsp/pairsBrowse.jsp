@@ -17,8 +17,8 @@
             </thead>
             <c:forEach items="${pairs}" var="par">
                 <tr>
-                    <td>${par.getFirstPlayer()}</td>
-                    <td>${par.getSecondPlayer()}</td>
+                    <td>${par.getFirstPlayer().getName()}</td>
+                    <td>${par.getSecondPlayer().getName()}</td>
                      <td>${par.getAllPoints()}</td>
                     <td style="width:5%">
 						<form:form action="/pairs/${par.getId()}" method="POST">
