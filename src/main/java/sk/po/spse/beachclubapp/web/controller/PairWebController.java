@@ -35,7 +35,9 @@ public class PairWebController
 	@GetMapping(value = "/pairs/tournament")
 	public ModelAndView getSortedPairsOnTournament() {
 		return new ModelAndView("/sortedPairsTournament").addObject("pairs", pairService.findAll());
+		
 	}
+	
 	
 	
 	@GetMapping(value = "/pairs/delete")

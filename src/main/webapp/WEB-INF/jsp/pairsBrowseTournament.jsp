@@ -23,15 +23,15 @@
                     <td>${par.getAllPoints()}</td>
                     
                     <td style="width:5%">
-						<form:form action="???????????????????" method="GET">
+						<form:form action= method="GET">
                             <input type="button" class="btn btn-sm btn-success" value="Add">
                         </form:form>
                     </td>
                 </tr>
             </c:forEach>
-
+ 		
         </table>
-        <form:form action="/pairs/tournament" method="GET">
+         <form:form action="/pairs/tournament" method="GET">
          <input type="submit" class="btn btn-sm btn-success" value="Submit">
          </form:form>
 
