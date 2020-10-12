@@ -28,9 +28,9 @@ public class PairController
 	private PlayerService playerService;
 	
 	@PostMapping("/pairs")
-	public ModelAndView addPair(@RequestParam("firstPlayerId") Long firstPlayerId, @RequestParam("secondPlayerId") Long secondPlayerId )
+	public ModelAndView addPair(@RequestParam("firstPlayerId") String firstPlayerId, @RequestParam("secondPlayerId") String secondPlayerId )
 	{
-		pairService.createPair(playerService.findPlayer(firstPlayerId), playerService.findPlayer(secondPlayerId));
+		pairService.createPair(playerService.findPlayer(Long.parseLong(firstPlayerId)), playerService.findPlayer(Long.parseLong(secondPlayerId)));
 		return new ModelAndView("/pairsBrowse").addObject("pairs", pairService.findAll());
 	}
 

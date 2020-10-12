@@ -36,4 +36,12 @@ public class PlayerWebController
 		 return new ModelAndView("/playersUpdate").addObject("player", playerService.findPlayer(id));
 	 }
 
+	 @GetMapping(value = "/players/browse/pair")
+	public ModelAndView createPlayersPair() {
+		return new ModelAndView("/playersBrowsePair")
+				.addObject("players", playerService.findAll())
+				.addObject("firstPlayerId", "")
+				.addObject("secondPlayerId", "");
+	 }
+
 }

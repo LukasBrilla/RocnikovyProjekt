@@ -55,7 +55,7 @@
 					id="navbarDropdownMenuLink" data-toggle="dropdown"
 					aria-haspopup="true" aria-expanded="false"> Beach Pairs </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-						<a class="dropdown-item" href="/pairs/add">Add</a> <a
+						<a class="dropdown-item" href="/players/browse/pair">Add</a> <a
 							class="dropdown-item" href="/pairs/browse">Browse</a>
 					</div></li>
 					

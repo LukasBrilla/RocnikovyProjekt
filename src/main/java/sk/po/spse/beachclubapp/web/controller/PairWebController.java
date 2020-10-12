@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 import sk.po.spse.beachclubapp.entity.Pair;
+import sk.po.spse.beachclubapp.entity.Player;
 import sk.po.spse.beachclubapp.service.PairService;
+import sk.po.spse.beachclubapp.service.PlayerService;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
@@ -32,13 +34,72 @@ public class PairWebController
 	
 	@Autowired
 	private PairService pairService;
+
+	@Autowired
+	private PlayerService playerService;
 	
 	
 	@GetMapping(value = "/pairs/add")
 	public ModelAndView getAddPairs() {
 		return new ModelAndView("/pairsAdd");
 	}
-	
+
+	@PostMapping(value = "/pairs/add")
+	public ModelAndView addPlayerToPair(@RequestParam("playerId") String playerId,
+											@RequestParam("players") String players,
+											@RequestParam("firstPlayerId") String firstPlayerId,
+											@RequestParam("secondPlayerId") String secondPlayerId) {
+		Set<Player> plrs = getPlayersFromStringIds(players);
+		if (playerId.equals("")) {
+			return new ModelAndView("/playersBrowsePair")
+					.addObject("players", plrs)
+					.addObject("firstPlayerId", firstPlayerId)
+					.addObject("secondPlayerId", secondPlayerId);
+		}
+		Player player = playerService.findPlayer(Long.parseLong(playerId));
+		plrs.remove(player);
+		if (firstPlayerId.equals("")) {
+			firstPlayerId = playerId;
+		} else {
+			if (secondPlayerId.equals("")) {
+				secondPlayerId = playerId;
+			}
+		}
+		return new ModelAndView("/playersBrowsePair")
+				.addObject("players", plrs)
+				.addObject("firstPlayerId", firstPlayerId)
+				.addObject("secondPlayerId", secondPlayerId);
+	}
+
+	@PostMapping(value = "/pairs/delete")
+	public ModelAndView deletePlayerFromPair(@RequestParam("playerId") String playerId,
+											 	@RequestParam("players") String players,
+											 	@RequestParam("firstPlayerId") String firstPlayerId,
+											 	@RequestParam("secondPlayerId") String secondPlayerId) {
+
+		Set<Player> plrs = getPlayersFromStringIds(players);
+		if (playerId.equals("")) {
+			return new ModelAndView("/playersBrowsePair")
+					.addObject("players", plrs)
+					.addObject("firstPlayerId", firstPlayerId)
+					.addObject("secondPlayerId", secondPlayerId);
+		}
+		Player player = playerService.findPlayer(Long.parseLong(playerId));
+		plrs.add(player);
+		if (firstPlayerId.equals(playerId)) {
+			firstPlayerId = "";
+		} else {
+			if (secondPlayerId.equals(playerId)) {
+				secondPlayerId = "";
+			}
+		}
+		return new ModelAndView("/playersBrowsePair")
+				.addObject("players", plrs)
+				.addObject("firstPlayerId", firstPlayerId)
+				.addObject("secondPlayerId", secondPlayerId);
+	}
+
+
 	@GetMapping(value = "/pairs/browse")
 	public ModelAndView getAllPairs() {
 		return new ModelAndView("/pairsBrowse").addObject("pairs", pairService.findAll());
@@ -110,6 +171,18 @@ public class PairWebController
 		String[] splitPair = ids.substring(1, ids.length() - 1).split(",");
 		for (String s : splitPair) {
 			result.add(pairService.findById(Long.parseLong(s.trim())));
+		}
+		return result;
+	}
+
+	private Set<Player> getPlayersFromStringIds(String ids) {
+		Set<Player> result = new HashSet<>();
+		if (ids.length() <= 2) {
+			return result;
+		}
+		String[] splitPair = ids.substring(1, ids.length() - 1).split(",");
+		for (String s : splitPair) {
+			result.add(playerService.findPlayer(Long.parseLong(s.trim())));
 		}
 		return result;
 	}

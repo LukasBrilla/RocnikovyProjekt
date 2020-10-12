@@ -2,6 +2,7 @@ package sk.po.spse.beachclubapp.entity;
 
 
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,10 +10,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.Size;
 
 //import org.hibernate.annotations.Check;
 import org.hibernate.annotations.ColumnDefault;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Entity
@@ -31,8 +36,14 @@ public class Player
 	@Column(nullable = false)
 	@ColumnDefault("0")
 	private int points;
-	
-	
+
+	@OneToMany(mappedBy = "firstPlayer", cascade = CascadeType.REMOVE, orphanRemoval = true)
+	private final List<Pair> firstPlayerPairs = new ArrayList<>();
+
+	@OneToMany(mappedBy = "secondPlayer", cascade = CascadeType.REMOVE, orphanRemoval = true)
+	private final List<Pair> secondPlayerPairs = new ArrayList<>();
+
+
 	@Column(name = "sex", nullable = false)
 	@Size(min=4, max=6)
 	private String sex;
@@ -61,9 +72,9 @@ public class Player
 	}
 	
 	public String getOppositeSex() {
-	if(sex.equalsIgnoreCase("Male"))
-	return "Female";
-	return "Male";
+		if(sex.equalsIgnoreCase("Male"))
+			return "Female";
+		return "Male";
 	}
 	
 	public void setSex(String sex) {
@@ -72,7 +83,7 @@ public class Player
 	
 	@Override
 	public String toString() {
-		return "Player [id=" + id + ", name=" + name + ", points=" + points + ", sex=" + sex + "]";
+		return id + "";
 	}
 
 }
