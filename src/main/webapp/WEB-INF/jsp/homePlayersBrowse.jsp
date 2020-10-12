@@ -10,15 +10,15 @@
         <table class="table table-hover">
             <thead>
             <tr>
-                <td>Name</td>
-                <td>Points</td>
-                <td>Sex</td>
-                <td>Phone</td>
-                <td>Email</td>
-                <td>Address</td>
-                <td>Registration Number</td>
-                <td>Handed</td>
-                <td>Clothes Size</td>
+                <td> style='font-weight:bold'Name</td>
+                <td style='font-weight:bold'>Points</td>
+                <td style='font-weight:bold'>Sex</td>
+                <td style='font-weight:bold'>Phone</td>
+                <td style='font-weight:bold'>Email</td>
+                <td style='font-weight:bold'>Address</td>
+                <td style='font-weight:bold'>Registration Number</td>
+                <td style='font-weight:bold'>Handed</td>
+                <td style='font-weight:bold'>Clothes Size</td>
             </tr>
             </thead>
             <c:forEach items="${homePlayers}" var="homplr">

@@ -10,16 +10,19 @@
         <table class="table table-hover">
             <thead>
             <tr>
-                <td>Name</td>
-                <td>Points</td>
-                <td>Sex</td>
+            <td style='font-weight:bold'>ID</td>
+                <td style='font-weight:bold'>Name</td>
+                <td style='font-weight:bold'>Points</td>
+                <td style='font-weight:bold'>Sex</td>
             </tr>
             </thead>
             <c:forEach items="${players}" var="plr">
                 <tr>
+                	<td>${plr.getId()}</td>
                     <td>${plr.getName()}</td>
                     <td>${plr.getPoints()}</td>
                     <td>${plr.getSex()}</td>
+                    
                     <td style="width:5%">
 						<form:form action="/players/${plr.getId()}" method="POST">
                             <input type="submit" class="btn btn-sm btn-danger" value="Delete">

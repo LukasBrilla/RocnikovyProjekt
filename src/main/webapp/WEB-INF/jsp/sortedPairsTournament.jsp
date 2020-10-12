@@ -10,10 +10,12 @@
         <h4>sorted pairs by points:</h4>
         <table class="table table-hover">
             <thead>
+            <bold>
             <tr>
-                <td>Team</td>
-                <td>Points Together</td>
+               <td style='font-weight:bold'>Team</td>
+                <td style='font-weight:bold'>Points Together</td>
             </tr>
+            </bold>
             </thead>
             <c:forEach items="${sortedPairs}" var="regPar">
                 <tr>

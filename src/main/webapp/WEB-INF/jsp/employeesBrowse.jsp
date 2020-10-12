@@ -10,8 +10,8 @@
         <table class="table table-hover">
             <thead>
             <tr>
-                <td>Name</td>
-                <td>Role</td>
+                <td style='font-weight:bold'>Name</td>
+                <td style='font-weight:bold'>Role</td>
             </tr>
             </thead>
             <c:forEach items="${employees}" var="emp">

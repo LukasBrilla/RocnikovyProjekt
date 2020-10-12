@@ -21,6 +21,7 @@ import org.hibernate.annotations.ColumnDefault;
 public class Player 
 {
 	@Id
+	
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id;
 	

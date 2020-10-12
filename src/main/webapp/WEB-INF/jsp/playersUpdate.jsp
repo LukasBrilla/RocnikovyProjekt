@@ -10,12 +10,12 @@
 	
 	
 <form action="${pageContext.request.contextPath}/players/update/${player.getId()}" method="post">
-<span class="label label-default">Name :</span>
+<span class="label label-default"><bold>Name :</bold></span>
 <input type=text name="name" value="${player.getName()}" class="form-control"><br>
-<span class="label label-default">Points :</span>
+<span class="label label-default"><bold>Points :</bold></span>
 <input type=text name="points" value="${player.getPoints()}" class="form-control"><br>
 
- <span class="label label-default">Sex :</span>
+ <span class="label label-default"><bold>Sex :</bold></span>
 <select name="sex" id="sex" class="form-control">
 <option value="${player.getSex()}">${player.getSex()}</option>
 <option value="${player.getOppositeSex()}">${player.getOppositeSex()}</option>

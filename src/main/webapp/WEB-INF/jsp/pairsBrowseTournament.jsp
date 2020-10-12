@@ -11,8 +11,8 @@
         <table class="table table-hover">
             <thead>
             <tr>
-                <td>Team</td>
-                <td>Points Together</td>
+                <td style='font-weight:bold'>Team</td>
+                <td style='font-weight:bold'>Points Together</td>
                             </tr>
             </thead>
             <c:forEach items="${pairs}" var="par">
@@ -39,8 +39,8 @@
         <table class="table table-hover">
             <thead>
             <tr>
-                <td>Team</td>
-                <td>Points Together</td>
+                <td style='font-weight:bold'>Team</td>
+                <td style='font-weight:bold'>Points Together</td>
             </tr>
             </thead>
             <c:forEach items="${registeredPairs}" var="regPar">

@@ -10,9 +10,9 @@
         <table class="table table-hover">
             <thead>
             <tr>
-                <td>First Player</td>
-                <td>Second Player</td>
-                <td>Points Together</td>
+                <td style='font-weight:bold'>First Player</td>
+                <td style='font-weight:bold'>Second Player</td>
+                <td style='font-weight:bold'>Points Together</td>
                             </tr>
             </thead>
             <c:forEach items="${pairs}" var="par">
