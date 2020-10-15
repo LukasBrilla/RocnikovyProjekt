@@ -25,11 +25,7 @@
                             <input type="submit" class="btn btn-sm btn-danger" value="Delete">
                         </form:form>
                     </td>
-                    <td style="width:5%">
-						<form:form action="/pairs/update/${par.getId()}" method="GET">
-                            <input type="submit" class="btn btn-sm btn-success" value="Update">
-                        </form:form>
-                    </td>
+                    
                 </tr>
             </c:forEach>
 

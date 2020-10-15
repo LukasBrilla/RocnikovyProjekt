@@ -25,7 +25,10 @@
             </c:forEach>
         <br>
         <br>
-      
+        <form:form action="/tournament-pairs" method="GET">
+           
+             <input type="submit" class="btn btn-sm btn-success" value="Create Tournament">
+      </form:form>
 
         
 

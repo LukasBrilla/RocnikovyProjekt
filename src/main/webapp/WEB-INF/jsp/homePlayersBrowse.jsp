@@ -10,7 +10,7 @@
         <table class="table table-hover">
             <thead>
             <tr>
-                <td> style='font-weight:bold'Name</td>
+                <td style='font-weight:bold'>Name</td>
                 <td style='font-weight:bold'>Points</td>
                 <td style='font-weight:bold'>Sex</td>
                 <td style='font-weight:bold'>Phone</td>

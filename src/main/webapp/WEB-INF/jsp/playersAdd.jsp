@@ -8,8 +8,6 @@
         <h1>Add New Player</h1>
 
 <form action="${pageContext.request.contextPath}/players" method="post">
-<span class="label label-default">ID :</span>
-    <input type=number name="id" class="form-control"><br>
     <span class="label label-default">Name :</span>
     <input type=text name="name" class="form-control"><br>
     <span class="label label-default">Points :</span>

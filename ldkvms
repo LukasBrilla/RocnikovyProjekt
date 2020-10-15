@@ -1,0 +1,109 @@
+[33mcommit ccbf855cc473b735b7a5e99a11fb9cd31a0f07dd[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: LukasBrilla <brillal@spse-po.sk>
+Date:   Mon Oct 12 13:16:53 2020 +0200
+
+    pair create add
+
+[33mcommit e496eb63e9dda179390898df6578508fc5b781f0[m
+Author: LukasBrilla <brillal@spse-po.sk>
+Date:   Mon Oct 12 12:11:10 2020 +0200
+
+    error in Entity_Player, want to manually set ID 1-4 in Player
+
+[33mcommit 446d644218003a17882aae67236e138ae5d83055[m
+Author: LukasBrilla <brillal@spse-po.sk>
+Date:   Sat Oct 10 13:10:47 2020 +0200
+
+    working sorted pairs
+
+[33mcommit 215de2dcdd504e5e19b75383310d60c6729b0d84[m
+Author: LukasBrilla <brillal@spse-po.sk>
+Date:   Sat Oct 10 11:07:00 2020 +0200
+
+    added Excel
+
+[33mcommit db321c855738f545eba3c0145819cdda8e5d2bc6[m
+Author: LukasBrilla <brillal@spse-po.sk>
+Date:   Sat Oct 10 10:34:16 2020 +0200
+
+    added pointsTogether, and trying to sort Pairs
+
+[33mcommit 5522abdac4d4d6e323eee503c15e4d2652b2e0b3[m
+Author: LukasBrilla <brillal@spse-po.sk>
+Date:   Fri Oct 9 23:49:53 2020 +0200
+
+    finally end of PAIR
+
+[33mcommit c0640e87288199265d46c41352313870d24ae804[m
+Author: LukasBrilla <brillal@spse-po.sk>
+Date:   Fri Oct 9 23:37:41 2020 +0200
+
+    ending Pair
+
+[33mcommit 8d87256c1e46376dbc434b67c457b34c6ccdd37f[m
+Author: LukasBrilla <brillal@spse-po.sk>
+Date:   Fri Oct 9 23:17:01 2020 +0200
+
+    Pair completed
+
+[33mcommit cd7538010c09e43705b98eb378b3a947640f8416[m
+Merge: a0ed326 430ffc6
+Author: David Brilla <david.brilla@tieto.com>
+Date:   Fri Oct 9 22:58:34 2020 +0200
+
+    Merge branch 'main' of https://github.com/LukasBrilla/RocnikovyProjekt into main
+
+[33mcommit a0ed32668c23c6aa020793f579390b1b51ddfe88[m
+Author: LukasBrilla <brillal@spse-po.sk>
+Date:   Fri Oct 9 22:29:56 2020 +0200
+
+    ending with PAIR, bud jsp of pair doesnt work?
+
+[33mcommit 430ffc6b3f1a6b3d3e9d5a2b21d2f9b34e07a510[m
+Author: LukasBrilla <brillal@spse-po.sk>
+Date:   Fri Oct 9 22:29:56 2020 +0200
+
+    ending with PAIR, bud jsp of pair doesnt work?
+
+[33mcommit 48bb1b4f699bc8b097d6f692281f4bcb6c5cfefe[m
+Merge: e091ccf c575fde
+Author: LukasBrilla <brillal@spse-po.sk>
+Date:   Thu Oct 8 10:53:56 2020 +0200
+
+    making first parts of Tournament
+
+[33mcommit e091ccfbe9e2b0191a5d60af66101628f45d51eb[m
+Author: LukasBrilla <brillal@spse-po.sk>
+Date:   Thu Oct 8 10:52:47 2020 +0200
+
+    making first parts of Tournament
+
+[33mcommit c575fde0b83483251280b1d7e3d5ec3892abab2e[m
+Author: LukasBrilla <brillal@spse-po.sk>
+Date:   Tue Oct 6 17:39:51 2020 +0200
+
+    reformat code in .jsp
+
+[33mcommit 43ba6080d1fd188fd0821e0a9b2cd5f0368a972c[m
+Author: LukasBrilla <brillal@spse-po.sk>
+Date:   Tue Oct 6 16:01:11 2020 +0200
+
+    6102020 - 16:00
+
+[33mcommit ab69de133708305d490bf8fa22c02a13fe9f33ef[m
+Author: LukasBrilla <brillal@spse-po.sk>
+Date:   Tue Oct 6 09:57:41 2020 +0200
+
+    6102020 - 10:00
+
+[33mcommit c7f61fc1d449655f9961da6376b7250766fdb3a2[m
+Author: LukasBrilla <brillal@spse-po.sk>
+Date:   Mon Oct 5 14:36:48 2020 +0200
+
+    first commit
+
+[33mcommit 994bb1f90d572f50f73ea0fa35a5b08f4a6cc5a0[m
+Author: LukasBrilla <brillal@spse-po.sk>
+Date:   Mon Oct 5 14:31:05 2020 +0200
+
+    My first commit

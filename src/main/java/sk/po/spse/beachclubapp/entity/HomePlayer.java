@@ -70,11 +70,5 @@ public class HomePlayer extends Player
 		this.clothesSize = clothesSize;
 	}
 	
-	@Override
-	public String toString() {
-		return "HomePlayer [phone=" + phone + ", email=" + email + ", address=" + address + ", registrationNumber="
-				+ registrationNumber + ", handed=" + handed + ", clothesSize=" + clothesSize + "]";
-	}
-	
 	
 }
